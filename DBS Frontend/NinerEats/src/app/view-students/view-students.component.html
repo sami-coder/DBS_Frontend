@@ -1,0 +1,53 @@
+<!-- <p>add-student works!</p> -->
+<h1>Student</h1>
+
+<div class="container">
+<table class="table">
+<thead>
+    <tr>
+        <th>Id</th>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Cell</th>
+        <th>Graduation Year</th>
+        <th>Major</th>
+        <th>type</th>
+        <!-- <th>Edit</th> -->
+        <th>Remove</th>
+        <!-- <th></th>
+        <th>Inventory</th> -->
+    </tr>
+</thead>
+<tbody>
+    <tr *ngFor="let student of students">
+        <td>{{student.id}}</td>
+        <td>{{student.name}}</td>
+        <td>{{student.email}}</td>
+        <td>{{student.cell}}</td>
+        <td>{{student.graduation_year}}</td>
+        <td>{{student.body}}</td>
+        <td>{{student.type}}</td>    
+        <!-- <td>1234</td>
+        <td>DJ</td>
+        <td>Dj@DJ.com</td>
+        <td>9809809809</td>
+        <td>2019</td>
+        <td>Computer Science</td>
+        <td>Graduate</td> -->
+        <!-- <td> <button (click)=editInv(inventory.id) class="btn btn-secondary"> Edit </button> </td> -->
+        <td> <button (click)=deleteStudent(student.id) class="btn btn-warning"> Delete </button> </td>
+
+        <!-- <td align="center" button (click)=showentree(restaurant.id) class="btn btn-success">View Entree</td> -->
+        <!-- &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; -->
+        <!-- <td></td> -->
+        <!-- <td align="center" button (click)=showinventory(restaurant.id) class="btn btn-success">View Inventory</td> -->
+
+        <!-- <td button class="btn btn-success">View Inventory</td> -->
+    </tr>
+</tbody>
+</table>
+<button (click)=addStudent() class="btn btn-success"> Add Student </button>
+
+<!-- <button class="btn btn-success" (click)=addInventory()> Add new Inventory Item</button> -->
+
+</div>
