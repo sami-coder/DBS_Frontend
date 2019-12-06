@@ -15,21 +15,28 @@ export class ManageStudentService {
 
   getStudents(){
     console.log();
-    return this.httpClient.get<Student[]>( `http://localhost:5000/getstudents`);
+    return this.httpClient.get<Student[]>( `http://localhost:5001/getstudents`);
   }
 
   postStudent(student){
     console.log(student);
-    return this.httpClient.post(`http://localhost:5000/postStudent`,student);
+    return this.httpClient.post(`http://localhost:5001/postStudent`,student);
   }
 
   deleteStudent(id){
     console.log(id);
-    return this.httpClient.delete( `http://localhost:5000/deletestudent`+id);
+    return this.httpClient.delete( `http://localhost:5001/deletestudent`+id);
   }
   putStudent(student){
     console.log(student);
-    return this.httpClient.put(`http://localhost:5000/putStudent`,student);
+    return this.httpClient.put(`http://localhost:5001/putStudent`,student);
   }
 
+  getSingleStudent(id){
+    return this.httpClient.get( `http://localhost:5001/getsinglestudents`,id);
+  }
+
+  putSingleStudent(student){
+    return this.httpClient.post(`http://localhost:5001/postSingleStudent`,student);
+  }
 }
